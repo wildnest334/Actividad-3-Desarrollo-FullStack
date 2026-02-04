@@ -1,0 +1,24 @@
+{
+  "name": "actividad-3-desarrollo-fullstack",
+  "version": "1.0.0",
+  "description": "Aqui estaran los códigos de mi actividad fullstack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildnest334/Actividad-3-Desarrollo-FullStack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/wildnest334/Actividad-3-Desarrollo-FullStack/issues"
+  },
+  "homepage": "https://github.com/wildnest334/Actividad-3-Desarrollo-FullStack#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
