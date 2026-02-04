@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Descargas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <svg class="icon-header" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <h1>Administrador de Descargas</h1>
+            </div>
+            <p class="subtitle">Gestiona todas tus descargas en un solo lugar</p>
+        </div>
+
+        <div class="card">
+            <h2 id="form-title">Nueva Descarga</h2>
+            <form id="download-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre del archivo</label>
+                        <input type="text" id="nombre" placeholder="ejemplo.iso" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asignadoA">Asignado a</label>
+                        <input type="text" id="asignadoA" placeholder="Nombre de la persona" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fechaCreacion">Fecha de Asignación</label>
+                    <input type="date" id="fechaCreacion" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary" id="submit-btn">
+                        <svg class="icon-btn" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <span id="submit-text">Agregar Descarga</span>
+                    </button>
+                    <button type="button" class="btn-secondary" id="cancel-btn" style="display: none;">
+                        <svg class="icon-btn" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <div class="list-header">
+                <h2>Descargas (<span id="total-count">0</span>)</h2>
+                <div class="badges">
+                    <span class="badge badge-green">
+                        <span id="completed-count">0</span> Completadas
+                    </span>
+                    <span class="badge badge-blue">
+                        <span id="downloading-count">0</span> Descargando
+                    </span>
+                    <span class="badge badge-yellow">
+                        <span id="paused-count">0</span> Pausadas
+                    </span>
+                </div>
+            </div>
+            <div id="downloads-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
